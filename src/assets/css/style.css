@@ -1,0 +1,128 @@
+/*police pour les titres*/
+/*@import url("https://fonts.google.com/specimen/Fjalla+One");
+/* police pour le corps*/
+/*@import url("https://fonts.google.com/?query=Droid+Serif");
+*/
+:root {
+    /* couleurs de la charte*/
+    --blanc : #FFFFFF;
+    --bleu : #55C0CF;
+    --grisfonce : #2C1E1E;
+    --noir : #1F1615;
+    --marron : #B65F28;
+    --jaune : #FFD543;
+}  
+.degrade{
+    background: linear-gradient(145deg, var(--marron), var(--jaune));
+}
+    /* prevu pour apparaitre au début du chargement + SEO puis masqué par les blocs de page*/
+.SEO{
+    display:none;
+}
+.entete{
+    background: linear-gradient(145deg, var(--marron), var(--noir));
+    height: 60px;
+}
+.logo{
+    width: 40px;
+}
+
+/* carousel */
+.carousel {
+    padding: 0 20px;
+}
+.carousel .carousel-item {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    max-height: 300px;
+}
+.carousel .carousel-item .img-box {
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 0%;
+}
+.carousel .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 0%;
+}
+.carousel .testimonial {
+    padding: 30px 0 10px;
+    text-align: center;
+}
+.carousel .overview {	
+    font-style: italic;
+}
+.carousel .overview b {
+    text-transform: uppercase;
+    color: #7AA641;
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+    background: none;
+}
+.carousel-control-prev i, .carousel-control-next i {
+    font-size: 68px;
+    line-height: 42px;
+    position: absolute;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel-indicators {
+    bottom: 0px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+    width: 12px;
+    height: 12px;
+    margin: 1px 3px;
+    border-radius: 20%;
+    border: none;
+}
+.carousel-indicators li {	
+    background: rgba(253, 20, 214, 0.664);
+    border-color: transparent;
+    box-shadow: inset 0 2px 1px rgba(231, 164, 9, 0.2);
+}
+.carousel-indicators li.active {	
+    background: rgb(161, 235, 231);		
+    box-shadow: inset 0 2px 1px rgba(19, 126, 248, 0.952);
+} 
+.lienBoutique{
+    text-align: center;
+    background-color: var(--marron);
+    box-shadow: 6px 5px 8px 2px rgb(223, 235, 120);
+    position: relative;
+    top: -100px;
+    width: 200px;
+    left: 100px;
+    line-height: 3rem;
+}
+.lienBoutique a {
+    text-decoration: none;
+    color: var(--jaune);
+}    
+.lienBoutique a:hover {
+    color: var(--bleu);
+    box-shadow: 6px 5px 8px 2px var(--bleu);
+}
+.col-center {
+    margin: 0 auto;
+    float: none !important;
+}
+
+/* navbar */
+.navbar-fond{
+    background: linear-gradient(145deg, var(--marron), var(--noir));
+    box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
+}
+
