@@ -34,7 +34,7 @@ export class Carousel extends Component {
                     </a>
                     {/*lien Boutique */}
                     <div className='lienBoutique'>
-                       <a href='../src/pages/boutique.html'>Voir la Boutique</a> 
+                       <a href='./boutique.html'>Voir la Boutique</a> 
                     </div>
 
                 </div>
