@@ -7,7 +7,7 @@ export class BurgerMenu extends Component {
           <nav className="navbar navbar-expand-lg navbar-light right degrade">
             <div className="container-fluid">
               <a href="#" className="navbar-brand">
-                <img src="./src/assets/images/logo.png" height="35" alt="ChocoPAP"/>
+                <img src="../src/assets/images/logo.png" height="35" alt="ChocoPAP"/>
               </a>
               <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span className="navbar-toggler-icon"></span>

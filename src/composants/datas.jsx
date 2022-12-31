@@ -1,23 +1,48 @@
-import React from 'react'
+import React, { Component, useState } from 'react'
 
-var listeProduits
-function datas() {  
+
+function litDatas(retour) {  
   var cheminOrigine =document.location.origin
   /*on récupére le fichier JSON des produits*/
-   window.onload = function(){
-       console.log('tutu0 '+listeProduits)
        var chemin=cheminOrigine+'/src/assets/products.json'
        $.get(chemin,function(data){
-          listeProduits= data
-          console.log('tutu',data)
-          console.log('tutu0 '+listeProduits)
+          retour=data
+          console.log('lecture JSON ',retour)
+         // setListeProduits(listeProduits=retour)
       })
-   } 
-
   return (
-    listeProduits
+    retour
   )
 }
 
-export default datas
+
+export class Datas extends Component {
+  constructor (props){
+    super(props)
+    //const [listeProduits, setListeProduits]  = useState([])
+    //this.setState({listeProduits : litDatas(listeProduits)})
+    //console.log('r'+this.state)
+  }
+  
+  mounted() {
+    this.setState({listeProduits : litDatas(listeProduits)})
+    console.log('r'+this.state)
+  }
+  
+  
+  render() {
+    <div>  
+    </div>
+    return (
+      <div></div>
+    )
+  }
+}
+export default Datas
+
+
+
+
+
+
 

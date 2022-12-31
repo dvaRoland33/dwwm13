@@ -5,6 +5,12 @@ import 'https://code.jquery.com/jquery-3.5.1.min.js'
 import 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'
 import BurgerMenu from '../composants/BurgerMenu'
 import PiedsDePage from '../composants/piedsDePage'
+import '../assets/js/ajouteElementDom'
+/* fonctions spécifiques */
+import ajouteElementDom from '../assets/js/ajouteElementDom'
+import reconstruitNomImage from '../assets/js/reconstruitNomImage'
+import extraitNomImage from '../assets/js/extraitNomImage'
+import ajouteElementDomImg from '../assets/js/ajouteElementDomImg'
 
 var produit
 var listeProduits =[]
@@ -32,42 +38,31 @@ function selectionneArticle(idRecherche){
       }
    }
 }
-/* permet d'ajouter une balise HTML dans le DOM  */
-function ajouteDiv(source,element,contenu,prefixe,postfixe,classe){
-    let nouveau= document.createElement(element)
-    source.append(nouveau)
-    nouveau.innerHTML=prefixe+contenu+postfixe
-    if (classe!=undefined){
-        nouveau.setAttribute('class',classe)
-    }
-}
 
 function afficheArticle(){
     let elm = document.getElementById('detailArticle')
-    ajouteDiv(elm,'div',produit.title,'','','titreDetailProduit')
-    ajouteDiv(elm,'div',produit.price,'prix ',' €','prixDetailProduit')
-    ajouteDiv(elm,'div',produit.description,'','','descriptionDetailProduit')
-    ajouteDiv(elm,'div',produit.note,'Note :','','prixDetailProduit')
+    ajouteElementDom(elm,'div',produit.title,'','','titreDetailProduit')
+    ajouteElementDom(elm,'div',produit.price,'prix ',' €','prixDetailProduit')
+    ajouteElementDom(elm,'div',produit.description,'','','descriptionDetailProduit')
+    ajouteElementDom(elm,'div',produit.note,'Note :','','prixDetailProduit')
     /* lien produit*/
-    let zoneLien = document.createElement('div')
+    /*let zoneLien = document.createElement('div')
     zoneLien.setAttribute('class','col-4 lienProduit')
-    elm.append(zoneLien)
+    elm.append(zoneLien)*/
+    ajouteElementDom(elm,'div','','','','col-4 lienProduit')
+
     let lienProduit = document.createElement('a')
     lienProduit.innerHTML = 'Ajouter au Panier'
     lienProduit.setAttribute('class','lienProduit')
     lienProduit.setAttribute('href','#'+produit.id)
     elm.append(lienProduit)
     /* image du produit */
-    let ZonesNomFichier= produit.image.split('/')
-    let nomFichier= ZonesNomFichier[ZonesNomFichier.length-1]
-    let contenu=cheminOrigine+'/src/assets/images/'+nomFichier
-    let contenuImage = document.createElement('img')
-    elm.append(contenuImage)
-    contenuImage.setAttribute("src",contenu)
-    contenuImage.setAttribute("alt",nomFichier)
-    contenuImage.setAttribute('class','imageDetailProduit')
-    ajouteDiv(elm,'div','Ingrédients','','','prixDetailProduit ')
-    ajouteDiv(elm,'div',produit.ingredients,'','')
+    let nomFichier=extraitNomImage(produit.image)
+    let contenu=reconstruitNomImage(nomFichier)
+    ajouteElementDomImg(elm,contenu,nomFichier,'imageDetailProduit')
+
+    ajouteElementDom(elm,'div','Ingrédients','','','prixDetailProduit ')
+    ajouteElementDom(elm,'div',produit.ingredients,'','')
     
     return(
         <div>           
