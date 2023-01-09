@@ -69,6 +69,6 @@ export default listerProduits
      lienProduit.innerHTML = 'Ajouter au Panier'
      lienProduit.setAttribute('class','lienProduit')
      //lienProduit.setAttribute('href','#'+produit.id)
-     lienProduit.setAttribute('onClick','ajouteAuPanier('+produit.id+')') 
+     lienProduit.setAttribute('onClick','ajouterAuPanier('+produit.id+')') 
      zoneLien.append(lienProduit)
   }

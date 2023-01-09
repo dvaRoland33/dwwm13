@@ -26,7 +26,12 @@
 .logo{
     width: 40px;
 }
-
+.reseaux{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 /* carousel */
 .carousel {
     padding: 0 20px;
@@ -126,22 +131,13 @@
     background: linear-gradient(145deg, var(--marron), var(--noir));
     box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
 }
+/* menu bar*/ 
+.logoMenu{
+    background-color: transparent;
+    width: 30px;
+}
 
 /* boutique categorie*/
-#listeProduit{
-    display : flex;
-    flex-direction: row;
-}
-/* à partir de md 768px */
-@media screen and (min-width: 768px) {*
-  #listeProduit{
-    display : flex;
-    flex-direction: column;
-    flex-flow: row;
-    flex-wrap: wrap;
-    }  
-}
-
 .listeCategorie{
     display :flex;
     flex-direction: column;
@@ -164,7 +160,7 @@
 .imageProduit{
     display: flexbox;
     max-width: 100%;
-    padding-top: 15px;
+    padding: 15px;
 }
 .prixProduit,
 .noteProduit{
@@ -210,7 +206,6 @@ button:hover{
 .imageDetailProduit{
     display: flexbox;
     max-width: 100%;
-  /*  padding-top: 15px;*/
     border-radius: 50px 0 50px;
 }
 .message{
@@ -221,5 +216,37 @@ button:hover{
     margin-bottom: 20px;
     line-height: 3rem;
 }
-
-
+/* specifique responsive*/
+.boutiquePrincipal{
+    display : flexbox;
+    flex-direction: row;
+}
+.articles{
+    display : flexbox;
+    flex-direction: row;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+#listeProduit{
+    display : flex;
+    flex-direction: row;
+}
+/* à partir de md 768px */
+@media screen and (min-width: 768px) {
+    .boutiquePrincipal{
+        display : flexbox;
+        flex-direction: column;
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+    .articles{
+        display : flexbox;
+        flex-direction: column;
+    }
+    #listeProduit{
+    display : flex;
+    flex-direction: column;
+    flex-flow: row;
+    flex-wrap: wrap;
+    } 
+}

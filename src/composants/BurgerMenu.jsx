@@ -16,7 +16,7 @@ export class BurgerMenu extends Component {
                 <div className="navbar-nav" id="liens">
                   <a href="./index.html" className="nav-item nav-link active">Accueil</a>
                   <a href="./boutique.html" className="nav-item nav-link">Boutique</a>
-                  <a href="./panier.html" className="nav-item nav-link ">Panier</a>
+                  <a href="./panier.html" className="nav-item nav-link ">Panier <span id ='menuPanier'></span><img src='./src/assets/images/caddy.png' alt='logo du caddy' className='logoMenu'></img></a>     
                 </div>
               </div>
             </div>

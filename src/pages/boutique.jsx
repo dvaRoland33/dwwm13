@@ -13,11 +13,7 @@ import reconstruitNomImage from '../assets/js/reconstruitNomImage'
 import extraitNomImage from '../assets/js/extraitNomImage'
 import ajouteElementDomImg from '../assets/js/ajouteElementDomImg'
 import listerProduits from '../assets/js/listerProduits'
-import ajouterAuPanier from '../assets/js/ajouterAuPanier'
 import gererFiltre from '../assets/js/gererFiltre'
-
-var listeProduits =[]
-var panier=[]
 
 var listeProduitsSelectionnes = []
 var cheminOrigine =document.location.origin
@@ -42,18 +38,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <BurgerMenu />
       <div className='container'>
         <h1 className='text-center'>BOUTIQUE</h1>
-        <div className='row offset-1 col-10 filtre' onClick={filtre}>
-          <CreationFiltre 
-          />
-        </div>
-        <div className='container '>
-          <div className='row offset-1 col-10 offset-md-0 col-md-12' id='listeProduit'>
-        </div>
+        <div className='row boutiquePrincipal'>
+          {/* filtre */} 
+          <div className='offset-1 col-10 offset-md-0 col-md-3 filtre' onClick={filtre}>
+           <CreationFiltre />
+          </div>
+          {/* articles */}
+          <div className='offset-1 col-10 offset-md-0 col-md-9'>
+            <div className="articles" id='listeProduit'>
+            </div>
+          </div>
         </div>
       </div>
       
       <PiedsDePage />
-      <script type="text/javascript" src="../src/assets/js/ajouterAuPanier.js"></script>
     </React.StrictMode>
   )
 

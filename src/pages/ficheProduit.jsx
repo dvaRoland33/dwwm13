@@ -46,15 +46,17 @@ function afficheArticle(){
     ajouteElementDom(elm,'div',produit.description,'','','descriptionDetailProduit')
     ajouteElementDom(elm,'div',produit.note,'Note :','','prixDetailProduit')
     /* lien produit*/
-    /*let zoneLien = document.createElement('div')
-    zoneLien.setAttribute('class','col-4 lienProduit')
-    elm.append(zoneLien)*/
     ajouteElementDom(elm,'div','','','','col-4 lienProduit')
 
-    let lienProduit = document.createElement('a')
+    //let lienProduit = document.createElement('a')
+    //lienProduit.innerHTML = 'Ajouter au Panier'
+    //lienProduit.setAttribute('class','lienProduit')
+    //lienProduit.setAttribute('href','#'+produit.id)
+    let lienProduit = document.createElement('button')
     lienProduit.innerHTML = 'Ajouter au Panier'
     lienProduit.setAttribute('class','lienProduit')
-    lienProduit.setAttribute('href','#'+produit.id)
+    lienProduit.setAttribute('onClick','ajouterAuPanier('+produit.id+')') 
+ 
     elm.append(lienProduit)
     /* image du produit */
     let nomFichier=extraitNomImage(produit.image)
