@@ -48,10 +48,6 @@ function afficheArticle(){
     /* lien produit*/
     ajouteElementDom(elm,'div','','','','col-4 lienProduit')
 
-    //let lienProduit = document.createElement('a')
-    //lienProduit.innerHTML = 'Ajouter au Panier'
-    //lienProduit.setAttribute('class','lienProduit')
-    //lienProduit.setAttribute('href','#'+produit.id)
     let lienProduit = document.createElement('button')
     lienProduit.innerHTML = 'Ajouter au Panier'
     lienProduit.setAttribute('class','lienProduit')

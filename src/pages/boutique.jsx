@@ -30,6 +30,7 @@ var cheminOrigine =document.location.origin
  function filtre(){
    gererFiltre(listeProduits)
  }
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
       <Datas 
@@ -47,6 +48,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <div className='offset-1 col-10 offset-md-0 col-md-9'>
             <div className="articles" id='listeProduit'>
             </div>
+          </div>
+          {/* 
+          <div className='offset-1 col-10 offset-md-0 col-md-9'> */}
+          <div className='AppelPanier'> 
+            <a id='AppelPanier' href='./panier.html' 
+               className='offset-1 col-8'> 
+               <button className='offset-1 col-8 offset-md-0 col-md-10'>Voir le Panier</button>
+             </a>
           </div>
         </div>
       </div>

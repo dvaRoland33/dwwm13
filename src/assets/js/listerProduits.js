@@ -39,6 +39,7 @@ export default listerProduits
  
      let lienDetail = document.createElement('a')
      lienDetail.setAttribute('href','ficheProduit.html#'+produit.id)
+     lienDetail.setAttribute('id','produit'+produit.id)
      zoneHaut.append(lienDetail)
  
      ajouteElementDomImg(lienDetail,contenu,nomFichier,'imageProduit')

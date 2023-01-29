@@ -2,11 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    
+    <link rel="stylesheet" src="./src/assets/css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Panier</title>
+    <script src="./src/assets/js/variablesGlobales.js" defer></script>
 </head>
 <body>
-    <p>page panier en cours de dev </p>
+    
+    <!-- début de l'insertion de code AJAX -->
+    <div id="root"></div>
+    <script type="module" src="src/pages/panier.jsx"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script>
+         function ajouteQuantite(numeroArticle){
+                element= document.getElementById('quantiteArticle_'+numeroArticle)
+                quantites[numeroArticle]=element.value
+               calculeTotal()
+            }
+        function calculeTotal(){
+                let montantTotal=0
+                for (let i=0; i<quantites.length-1; i++){
+
+                    var montant=quantites[i]*listeProduits[i].price
+                    montantTotal=montantTotal+montant
+                  //  console.log(montant)
+                }
+                montant = document.getElementById('montantTotal')
+                montant.innerHTML=montantTotal+' €'
+        }
+        function supprimerArticleDeSelection(numeroArticle){   
+                quantites[numeroArticle]=0
+
+                let elmt = document.getElementById('articlePanier_'+numeroArticle)
+                while (elmt.children.length>0){
+                    elmt.children[0].remove()
+                }
+                elmt.remove()
+                calculeTotal()
+                return(
+                    quantites
+                )    
+        }
+
+        </script>
 </body>
 </html>

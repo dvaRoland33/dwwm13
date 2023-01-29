@@ -1,2 +1,4 @@
 var selection = new Array
-var listeProduits =[]
+var listeProduits = new Array
+var quantites= new Array
+var listeAchat = new Array
