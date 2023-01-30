@@ -18,7 +18,7 @@ var cheminOrigine =document.location.origin
 var produit 
 /*on récupére le fichier JSON des produits*/
  window.onload = function(){
-     var chemin=cheminOrigine+'/src/assets/products.json'
+     var chemin=cheminOrigine+'/ressources/products.json'
      var selection=document.location.hash
      $.get(chemin,function(data){
         listeProduits= data

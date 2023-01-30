@@ -16,13 +16,13 @@ export class Carousel extends Component {
                     {/*<!-- Wrapper for carousel items -->*/}
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <div className="img-box"><img src="/src/assets/images/accueil1.jpg" alt="accueil1"/></div>
+                            <div className="img-box"><img src="/ressources/images/accueil1.jpg" alt="accueil1"/></div>
                         </div>
                         <div className="carousel-item">
-                            <div className="img-box"><img src="/src/assets/images/accueil2.jpg" alt="accueil2"/></div>
+                            <div className="img-box"><img src="/ressources/images/accueil2.jpg" alt="accueil2"/></div>
                         </div>
                         <div className="carousel-item">
-                            <div className="img-box"><img src="/src/assets/images/accueil3.jpg" alt="accueil3"/></div>
+                            <div className="img-box"><img src="/ressources/images/accueil3.jpg" alt="accueil3"/></div>
                        </div>
                     </div>
                     {/*<!-- Carousel controls -->*/}
@@ -34,7 +34,7 @@ export class Carousel extends Component {
                     </a>
                     {/*lien Boutique */}
                     <div className='lienBoutique'>
-                       <a href='./boutique.html'>Voir la Boutique</a> 
+                       <a href='boutique.html'>Voir la Boutique</a> 
                     </div>
 
                 </div>

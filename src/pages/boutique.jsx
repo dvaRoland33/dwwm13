@@ -7,6 +7,7 @@ import BurgerMenu from '../composants/BurgerMenu'
 import PiedsDePage from '../composants/piedsDePage'
 import CreationFiltre from '../composants/creationFiltre'
 import Datas from '../composants/datas'
+import "/ressources/variablesGlobales.js"
 /* fonctions spécifiques */
 import ajouteElementDom from '../assets/js/ajouteElementDom'
 import reconstruitNomImage from '../assets/js/reconstruitNomImage'
@@ -19,8 +20,10 @@ var listeProduitsSelectionnes = []
 var cheminOrigine =document.location.origin
 /*on récupére le fichier JSON des produits*/
  window.onload = function(){
-     var chemin=cheminOrigine+'/src/assets/products.json'
+     var chemin=cheminOrigine+'/ressources/products.json'
+     //console.log('passage')
      $.get(chemin,function(data){
+        var listeProduits = new Array
         listeProduits= data
         console.log('lecture JSON'+listeProduits)
         listerProduits(listeProduits)

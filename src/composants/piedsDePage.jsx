@@ -17,9 +17,9 @@ export class PiedsDePage extends Component {
                 </div>
                 <div id="reseaux" className='col-12 col-lg-2'>
                     <div className='d-flex reseaux '>
-                        <a><img className='logo' src='../src/assets/images/logoFaceBook.png' alt='Facebook'/></a>
-                        <a><img className='logo' src='../src/assets/images/logoInstagram.png' alt='Instagram'/></a>
-                        <a><img className='logo' src='../src/assets/images/logoTweeter.png' alt='Tweeter'/></a>
+                        <a><img className='logo' src='../ressources/images/logoFaceBook.png' alt='Facebook'/></a>
+                        <a><img className='logo' src='../ressources/images/logoInstagram.png' alt='Instagram'/></a>
+                        <a><img className='logo' src='../ressources/images/logoTweeter.png' alt='Tweeter'/></a>
                     </div> 
                 </div>
 

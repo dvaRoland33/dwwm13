@@ -7,7 +7,7 @@ export class BurgerMenu extends Component {
           <nav className="navbar navbar-expand-lg navbar-light right degrade">
             <div className="container-fluid">
               <a href="#" className="navbar-brand">
-                <img src="../src/assets/images/logo.png" height="35" alt="ChocoPAP"/>
+                <img src="./ressources/images/logo.png" height="35" alt="ChocoPAP"/>
               </a>
               <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span className="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@ export class BurgerMenu extends Component {
                 <div className="navbar-nav" id="liens">
                   <a href="./index.html" className="nav-item nav-link active">Accueil</a>
                   <a href="./boutique.html" className="nav-item nav-link">Boutique</a>
-                  <a id="menuPanier" href="./panier.html" className="nav-item nav-link ">Panier <span id ='quantitePanier'></span><img src='./src/assets/images/caddy.png' alt='logo du caddy' className='logoMenu'></img></a>     
+                  <a id="menuPanier" href="./panier.html" className="nav-item nav-link ">Panier <span id ='quantitePanier'></span><img src='./ressources/images/caddy.png' alt='logo du caddy' className='logoMenu'></img></a>     
                 </div>
               </div>
             </div>

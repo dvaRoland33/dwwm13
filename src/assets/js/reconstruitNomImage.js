@@ -3,7 +3,7 @@ import React from 'react'
 function reconstruitNomImage(nomImage) {
     var cheminOrigine =document.location.origin
     return(
-        cheminOrigine+'/src/assets/images/'+nomImage
+        cheminOrigine+'/ressources/images/'+nomImage
     )
 }
 

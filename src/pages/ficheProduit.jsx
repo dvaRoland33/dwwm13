@@ -17,10 +17,11 @@ var listeProduits =[]
 var cheminOrigine =document.location.origin
 /*on récupére le fichier JSON des produits*/
  window.onload = function(){
-     var chemin=cheminOrigine+'/src/assets/products.json'
+     var chemin=cheminOrigine+'/ressources/products.json'
      var idRecherche=document.location.hash
      $.get(chemin,function(data){
         listeProduits= data
+        console.log(data)
         selectionneArticle(idRecherche)
     })
  }
