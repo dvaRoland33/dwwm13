@@ -23,7 +23,6 @@ var cheminOrigine =document.location.origin
      var chemin=cheminOrigine+'/ressources/products.json'
      //console.log('passage')
      $.get(chemin,function(data){
-        var listeProduits = new Array
         listeProduits= data
         console.log('lecture JSON'+listeProduits)
         listerProduits(listeProduits)
@@ -31,6 +30,7 @@ var cheminOrigine =document.location.origin
  }
 
  function filtre(){
+   console.log(listeProduits)
    gererFiltre(listeProduits)
  }
 
